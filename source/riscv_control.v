@@ -36,7 +36,7 @@ always @(*) begin
             memread_o   = 1'b0;
             memwrite_o  = 1'b0;
             branch_o    = 1'b0;
-            aluop_o     = 2'b10;    // ALU?— 10 ëª…ë ¹ ? „?‹¬(Funct ?•„?“œ?— ?”°?¼ ?—°?‚° ?‹¬?¼ì§?)
+            aluop_o     = 2'b10;    // ALU?â€”Â 10 Ã«Âªâ€¦Ã«Â Â¹ ?Â â€?â€¹Â¬(Funct ?â€¢â€?â€œÅ“?â€”Â ?â€Â°?ÂÂ¼ ?â€”Â°?â€šÂ° ?â€¹Â¬?ÂÂ¼Ã¬Â§?)
             hasfunct7_o = 1'b1;     // R-type has funct7 field
         end
         `OP_OP_IMM : begin  // I-type Opcode
@@ -46,7 +46,7 @@ always @(*) begin
             memread_o   = 1'b0;
             memwrite_o  = 1'b0;
             branch_o    = 1'b0;
-            aluop_o     = 2'b10;    // ALU?— 10 ëª…ë ¹ ? „?‹¬(Funct ?•„?“œ?— ?”°?¼ ?—°?‚° ?‹¬?¼ì§?)
+            aluop_o     = 2'b10;    // ALU?â€”Â 10 Ã«Âªâ€¦Ã«Â Â¹ ?Â â€?â€¹Â¬(Funct ?â€¢â€?â€œÅ“?â€”Â ?â€Â°?ÂÂ¼ ?â€”Â°?â€šÂ° ?â€¹Â¬?ÂÂ¼Ã¬Â§?)
             hasfunct7_o = 1'b0;     // I-type has no funct7 field
         end
         `OP_LOAD : begin    // Load(I-type)
@@ -56,7 +56,7 @@ always @(*) begin
             memread_o   = 1'b1;
             memwrite_o  = 1'b0;
             branch_o    = 1'b0;
-            aluop_o     = 2'b00;    // ALU?— 00 ëª…ë ¹ ? „?‹¬(ADD) - ì£¼ì†Œ ê³„ì‚°?— ?‚¬?š©
+            aluop_o     = 2'b00;    // ALU?â€”Â 00 Ã«Âªâ€¦Ã«Â Â¹ ?Â â€?â€¹Â¬(ADD) - Ã¬Â£Â¼Ã¬â€ Å’ ÃªÂ³â€Ã¬â€šÂ°?â€”Â ?â€šÂ¬?Å¡Â©
             hasfunct7_o = 1'b0;     // I-type has no funct7 field
         end
         `OP_STORE : begin   // Store(S-type)
@@ -66,7 +66,7 @@ always @(*) begin
             memread_o   = 1'b0;
             memwrite_o  = 1'b1;
             branch_o    = 1'b0;
-            aluop_o     = 2'b00;    // ALU?— 00 ëª…ë ¹ ? „?‹¬(ADD) - ì£¼ì†Œ ê³„ì‚°?— ?‚¬?š©
+            aluop_o     = 2'b00;    // ALU?â€”Â 00 Ã«Âªâ€¦Ã«Â Â¹ ?Â â€?â€¹Â¬(ADD) - Ã¬Â£Â¼Ã¬â€ Å’ ÃªÂ³â€Ã¬â€šÂ°?â€”Â ?â€šÂ¬?Å¡Â©
             hasfunct7_o = 1'b0;     // S-type has no funct7 field
         end
         `OP_BRANCH : begin  // BEQ, BNE, BGE, BLT
@@ -76,7 +76,7 @@ always @(*) begin
             memread_o   = 1'b0;
             memwrite_o  = 1'b0;
             branch_o    = 1'b1;
-            aluop_o     = 2'b01;    // ALU subtract ?—°?‚° ?ˆ˜?–‰(ê²°ê³¼ ê°™ìœ¼ë©? Zero==1, ?‘?œ¼ë©? lt = 1) - Branch ?Œë³„ì— ?´?š©
+            aluop_o     = 2'b01;    // ALU subtract ?â€”Â°?â€šÂ° ?Ë†Ëœ?â€“â€°(ÃªÂ²Â°ÃªÂ³Â¼ ÃªÂ°â„¢Ã¬Å“Â¼Ã«Â©? Zero==1, ?Å¾â€˜?Å“Â¼Ã«Â©? lt = 1) - Branch ?Å’ÂÃ«Â³â€Ã¬â€”Â ?ÂÂ´?Å¡Â©
             hasfunct7_o = 1'b0;     // SB-type has no funct7 field
         end
         default : begin     // Invalid Opcode

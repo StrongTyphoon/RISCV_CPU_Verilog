@@ -14,7 +14,7 @@ module riscv_immgen(
   reg [11:0] imm_s;
   reg [11:0] imm_sb;
 
-  // Opcode √ﬂ√‚
+  // Opcode √É√ü√É√¢
   assign opcode = instruction_i[6:0];
 
   always @* begin
